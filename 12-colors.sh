@@ -7,6 +7,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="/e[31m"
 G="/e[32m"
 N="/e[0m"
+
 echo "Script started executing at:$TIMESTAMP"
 
 VALIDATE(){

@@ -32,12 +32,12 @@ if [ $USERID -ne 0 ]
   do
          echo "packages to install: $i"
          dnf list installed $i &>>$LOGFILE
-      if  [$? -eq 0]
-      then 
-         echo -e "$i already installed....$Y skipping $N"
-      else
-         dnf install $i -y &>>$LOGFILE
-         VALIDATE $? "Installaton of $i"
-      fi    
+        if  [ $? -eq 0 ]
+        then 
+             echo -e "$i already installed....$Y skipping $N"
+         else
+             dnf install $i -y &>>$LOGFILE
+             VALIDATE $? "Installaton of $i"
+        fi    
   done
 

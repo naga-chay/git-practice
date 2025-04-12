@@ -2,3 +2,4 @@
 
 echo "All Varialbes: $@"
 echo "No of varialbles Passed: $#"
+echo "Script name: $0"

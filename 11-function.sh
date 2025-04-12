@@ -8,22 +8,21 @@ LOGFILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 VALIDATE(){
 
-   if [$1 is -ne 0]
+   if [ $1 is -ne 0 ]
    then 
-    echo "$2...FAILURE"   
-    exit 1
+       echo "$2...FAILURE"   
+       exit 1
    else
-    echo "$2...SUCCESS"
+       echo "$2...SUCCESS"
    fi   
-
 }
 
-   if [$USERID -ne 0]
+   if [ $USERID -ne 0 ]
    then 
-    echo "Please run this script with root access."
-    exit 1 # manually exit if error comes.
+       echo "Please run this script with root access."
+       exit 1 # manually exit if error comes.
    else
-    echo "you are super user."
+       echo "you are super user."
    fi
 
 dnf install mysql -y &>>$LOGFILE
